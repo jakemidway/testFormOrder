@@ -1,0 +1,59 @@
+@import "normalize";
+@import "fonts";
+@import "variables";
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;;
+    font-size: 10px;
+    color: $colorText;
+}
+
+body {
+    font-size: 1.4rem;
+    min-width: 320px;
+    background-color: $colorBG;
+    padding: 60px 0;
+}
+
+.form{
+    background-color: #fff;
+    margin: auto;
+    width: 320px;
+    padding: 40px 20px 0;
+}
+.right-face{
+    display: flex;
+    justify-content: space-between;
+    height: 234px;
+    background: 
+        url(./../images/image.png) 50% 81% no-repeat,
+        url(./../images/Ellipse.svg) 50% 32px no-repeat;
+    margin-bottom: 37px;
+    h2{
+        line-height: 2.4rem;
+    }
+}
+.left-column{
+    h2{
+        text-align: center;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 130%;
+        margin-bottom: 28px;
+    }
+}
+
+
+
+
+
+
+
