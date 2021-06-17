@@ -11,7 +11,8 @@
 }
 
 html {
-    font-family: 'Montserrat', sans-serif;;
+    font-family: 'Montserrat', sans-serif;
+    ;
     font-size: 10px;
     color: $colorText;
 }
@@ -23,37 +24,121 @@ body {
     padding: 60px 0;
 }
 
-.form{
+.text-accent {
+    color: $colorAccent;
+}
+
+.form {
     background-color: #fff;
     margin: auto;
     width: 320px;
-    padding: 40px 20px 0;
+    padding: 40px 0 0;
 }
-.right-face{
+
+
+.right-face {
     display: flex;
+    padding: 0 20px;
     justify-content: space-between;
     height: 234px;
-    background: 
+    background:
         url(./../images/image.png) 50% 81% no-repeat,
         url(./../images/Ellipse.svg) 50% 32px no-repeat;
     margin-bottom: 37px;
-    h2{
+
+    h2 {
         line-height: 2.4rem;
     }
 }
-.left-column{
-    h2{
+
+.left-column {
+    h2 {
         text-align: center;
         font-weight: 800;
         font-size: 30px;
         line-height: 130%;
-        margin-bottom: 28px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 28px 20px;
+    }
+
+    label {
+        font-weight: 800;
+        font-size: 1.2rem;
+        line-height: 130%;
+        margin-bottom: 10px;
+
+        &:nth-child(3) {
+            margin-top: 20px;
+        }
+    }
+
+    input {
+        background: #F8F8F8;
+        border: 1px solid $colorDis;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 130%;
+        padding: 16px 0px 16px 10px;
+
+        &::placeholder {
+            color: $colorText;
+            opacity: 0.2;
+        }
+    }
+
+    select {
+        background: #F8F8F8;
+        border: 1px solid #E4E4E4;
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 16px 10px;
+    }
+
+    button {
+        display: flex;
+        justify-content: center;
+        color: #fff;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 130%;
+        max-width: 320px;
+        padding: 12px 20px;
+        background-color: $colorAccent;
+        border-radius: 5px;
+        border: 1px solid $colorAccent;
+        transition: all 0.31s ease-out;
+
+        &:hover {
+            border: 1px solid $colorText;
+        }
+
+        .arrey {
+            width: 17px;
+            height: 18px;
+            margin-left: 10px;
+            background: url("./../images/arrey.svg") 50% 50% no-repeat;
+        }
     }
 }
 
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
 
-
-
-
-
-
+.trast {
+    background-color: $colorBG-light;
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 70px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 130%;
+    background: url(./../images/lock.svg) 50% 50% no-repeat;
+}
