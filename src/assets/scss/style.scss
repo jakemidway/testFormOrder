@@ -27,11 +27,19 @@ body {
     color: $colorAccent;
 }
 
-.form {
+.order-form {
     background-color: #fff;
     margin: auto;
     width: 320px;
     padding: 40px 0 0;
+
+    @media (min-width: 1280px) {
+        display: flex;
+        padding: 0;
+        width: 1120px;
+
+        justify-content: space-between;
+    }
 }
 
 
@@ -45,23 +53,54 @@ body {
         url(./../images/Ellipse.svg) 50% 32px no-repeat;
     margin-bottom: 37px;
 
+    @media (min-width: 1280px) {
+        width: 560px;
+        height: auto;
+        padding: 40px;
+        margin: 0;
+        color: #fff;
+        background-color: $colorAccent;
+        background:
+            url(./../images/image-big.png) 50% 81% no-repeat,
+            url(./../images/Ellipse.svg) 20px 71px / 398px no-repeat,
+            url(./../images/big-hoop.svg) 235px -75px no-repeat,
+            linear-gradient($colorAccent, $colorSecondAccent);
+        flex-direction: column;
+    }
+
     h2 {
+        font-size: 1.8rem;
         line-height: 2.4rem;
     }
 }
 
 .left-column {
+    @media (min-width: 1280px) {
+        width: 50%
+    }
+
     h2 {
         text-align: center;
         font-weight: 800;
         font-size: 30px;
         line-height: 130%;
+
+        @media (min-width: 1280px) {
+            background-color: $colorBG-light;
+            padding: 29px 129px;
+        }
     }
 
     form {
         display: flex;
         flex-direction: column;
         padding: 28px 20px;
+        max-width: 320px;
+
+        @media (min-width: 1280px) {
+            padding: 52px 0 60px;
+            margin-left: 117px;
+        }
     }
 
     label {
@@ -83,10 +122,13 @@ body {
         font-size: 14px;
         line-height: 130%;
         padding: 16px 0px 16px 10px;
-
+        transition: all 0.31s ease-out;
         &::placeholder {
             color: $colorText;
             opacity: 0.2;
+        }
+        &:hover{
+            border: 1px solid $colorText;
         }
     }
 
@@ -98,6 +140,7 @@ body {
         padding: 16px 10px;
     }
 
+    .btn,
     button {
         display: flex;
         justify-content: center;
@@ -107,13 +150,16 @@ body {
         line-height: 130%;
         max-width: 320px;
         padding: 12px 20px;
-        background-color: $colorAccent;
+        
         border-radius: 5px;
         border: 1px solid $colorAccent;
         transition: all 0.31s ease-out;
-
+        background: 
+            // url("./../images/arrey.svg") 68% 50% no-repeat,
+            $colorAccent;
         &:hover {
             border: 1px solid $colorText;
+            background-color: $colorSecondAccent;
         }
 
         .arrey {
@@ -129,16 +175,43 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 28px;
+
+    input {
+        max-width: 174px;
+
+        @media (min-width: 1280px) {
+            max-width: 184px;
+        }
+    }
+
+    select {
+        position: relative;
+        width: 50%;
+        margin-left: 10px;
+        background: url(./../images/flag.png) 48px 46% no-repeat;
+        transition: all 0.31s ease-out;
+        &:hover {
+            border: 1px solid $colorText;
+        }
+        @media (min-width: 1280px) {
+            margin-left: 20px;
+        }
+
+    }
 }
 
 .trast {
-    background-color: $colorBG-light;
     display: flex;
     justify-content: space-between;
     padding: 11px 70px;
     font-weight: 700;
     font-size: 1.4rem;
     line-height: 130%;
-    background: url(./../images/lock.svg) 50% 50% no-repeat;
-}
+    background: 
+        url(./../images/lock.svg) 50% 50% no-repeat,
+        $colorBG-light;
 
+    @media (min-width: 1280px) {
+        display: none;
+    }
+}
